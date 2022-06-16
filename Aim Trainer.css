@@ -1,0 +1,313 @@
+.aimtrainer-main {
+  display: block;
+  padding: 0px 0px 0px 0px;
+  min-width: 260px;
+  margin: auto;
+  border: none;
+}
+.aimtrainer-main:after {
+  content: "";
+  clear: both;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.aimtrainer-container {
+  background: #bfbdb6;
+  background: -webkit-linear-gradient(to right, #bfbdb6, #8d8c85);
+  background: linear-gradient(to right, #bfbdb6, #8d8c85);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 10px 0px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #bfbdb6;
+  text-align: center;
+  overflow: hidden !important;
+  position: relative;
+  min-height: 520px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.aimtrainer-settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 30px;
+  width: 100%;
+}
+.aimtrainer-settings section {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 260px;
+  padding: 10px 20px;
+}
+.aimtrainer-settings div {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.aimtrainer-settings label {
+  color: black;
+  margin: 0px;
+  margin-right: 8px;
+  display: inline-block;
+  font-size: 16px;
+}
+.aimtrainer-cards {
+  min-height: 280px;
+  padding: 10px 0px;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+  margin: 30px 0px 0px 0px;
+}
+#countdown {
+  position: absolute;
+  font-size: 30px;
+  width: 300px;
+  text-align: center;
+  top: calc(50% - 60px);
+  left: calc(50% - 150px);
+  color: white;
+  animation: blink 490ms ease infinite alternate;
+}
+.Reticle {
+}
+#Reticle {
+  display: none;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  z-index: 99;
+}
+.target {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-image: url("https://joltfly.com/wp-content/uploads/2021/04/Joltfly-Aim-Trainer-Game-Target.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  background-color: white;
+  transition: 0.4s;
+}
+.target.hover {
+  background-color: white;
+}
+.target-preview {
+  position: relative;
+}
+.practice-area {
+  display: none;
+  transform-origin: center;
+  width: 85vw;
+  height: 85vh;
+  position: absolute;
+  border: 2px solid #a71d27;
+  border-radius: 10px;
+  background: radial-gradient(#bfbdb6, #8d8c85);
+}
+.aimtrainer-button {
+  margin: 30px;
+  height: 50px;
+  width: 250px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0px;
+  background-color: #8e8d88;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 20px;
+  transition: background-color 0.2s ease-in;
+  transition: background-color 0.2s ease-out;
+}
+.aimtrainer-button:hover {
+  background-color: #7a7974;
+  color: white;
+}
+.aimtrainer-settings input[type="color"] {
+  background-color: rgba(0, 0, 0, 0.288);
+  border: none;
+}
+.aimtrainer-settings input[type="number"] {
+  width: 100px;
+  border: none;
+  position: relative;
+  background: rgba(0, 0, 0, 0.288);
+  color: rgb(236, 236, 236);
+  outline: none;
+  opacity: 0.8;
+  margin: 5px;
+  padding: 5px 5px 5px 10px;
+  transition: all 0.1s;
+}
+.aimtrainer-settings input[type="number"] + span {
+  position: relative;
+  margin-top: 0px;
+}
+.aimtrainer-settings input[type="number"] + span::before {
+  position: absolute;
+  top: 15px;
+  left: -105px;
+  content: "";
+  height: 2px;
+  width: 100px;
+  background: red;
+  transform: scaleX(0);
+  transition: transform 250ms cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+.aimtrainer-settings input[type="number"]:hover {
+  opacity: 1;
+}
+.aimtrainer-settings input[type="number"]:focus + span::before {
+  transform: scaleX(1);
+}
+.flex-span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aimtrainer-settings input[type="range"] {
+  appearance: none;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.288);
+  border-radius: 5px;
+  outline: none;
+  opacity: 0.8;
+  -webkit-transition: 0.1s;
+  transition: opacity 0.1s;
+}
+.aimtrainer-settings input[type="range"]:hover,
+.aimtrainer-settings input[type="range"]:focus {
+  opacity: 1;
+}
+.aimtrainer-settings input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  background: red;
+  cursor: grab;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.aimtrainer-settings input[type="range"]::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+@keyframes blink {
+  from {
+    color: black;
+  }
+  to {
+    color: #333233;
+  }
+}
+.aim-trainer-modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding: 100px 10px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.aim-trainer-main-msg {
+  background: #8d8c85;
+  background: -webkit-linear-gradient(to right, #8d8c85, #bfbdb6);
+  background: linear-gradient(to right, #8d8c85, #bfbdb6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  padding: 10px 20px 10px 20px;
+  font: 17px/30px Arial, Helvetica, sans-serif;
+  margin: auto;
+  max-width: 750px;
+  min-width: 260px;
+  border: none;
+  border-radius: 10px;
+}
+.aim-trainer-main-msg-content {
+  background: none;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: block;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 0;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #bfbdb6;
+  text-align: center;
+  overflow: hidden !important;
+}
+.aim-trainer-main-msg-image {
+  border-right: 2px solid #bfbdb6;
+  margin: 10px;
+  min-height: 180px;
+  width: 180px;
+  float: left;
+}
+.social-share-button {
+  padding: 2px 2px 2px 4px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  margin: 15px 10px 15px 0px;
+  float: left;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+  transition: border-color 0.3s ease-out;
+}
+.social-share-button:hover {
+  border-color: #bfbdb6;
+  background-color: #bfbdb6;
+  transition: background-color 0.3s ease-in;
+  transition: border-color 0.3s ease-in;
+}
+.modalclosebtn {
+  color: white;
+  cursor: pointer;
+}
+.modalclosebtn:hover {
+  color: red;
+  cursor: pointer;
+}
+.aim-trainer-reset-button {
+  position: relative;
+  height: 40px;
+  width: 40px;
+  transition: background-color 0.15s ease-in;
+  font-size: 25px;
+  text-align: center;
+  padding: 0px 7px 8px 4px;
+  line-height: 40px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  background-color: #bfbdb6;
+  border-radius: 50%;
+}
+.aim-trainer-reset-button:hover {
+  background-color: #8d8c85;
+  transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-out;
+}
